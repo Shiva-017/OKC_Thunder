@@ -168,7 +168,7 @@
                         <circle *ngFor="let shot of selectedGame.shots" [attr.cx]="getShotPosition(shot).x"
                             [attr.cy]="getShotPosition(shot).y" r="10"
                             [attr.class]="shot.isMake ? 'shot-marker make' : 'shot-marker miss'"
-                            (mouseover)="hoveredShot = shot; showShotDetails(shot)" (mouseleave)="hoveredShot = null">
+                            (mouseover)="hoveredShot = shot;" (mouseleave)="hoveredShot = null">
                         </circle>
                     </g>
     

@@ -4,15 +4,11 @@ import django
 
 import sys
 
-# Add the backend directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-# Set the environment variable for the settings module
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
 
-# Setup Django
 django.setup()
 
-# Import your models after setting up Django
 from app.dbmodels.models import Player, Team, Game, GamePlayerStats, PlayerShots
 
 def load_data():
