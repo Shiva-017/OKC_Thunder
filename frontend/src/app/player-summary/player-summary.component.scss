@@ -1,8 +1,209 @@
-player-summary-component {
-  .placeholder {
-    height: 600px;
+.player-summary-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  .player-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 20px;
+
+    .player-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .player-info {
+      h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
   }
+
+
+    .game-log-section {
+      flex: 2;
+      min-width: 800px;
+
+      h2 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        th, td {
+          padding: 20px;
+          text-align: left;
+          border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+          background-color: #aeb3d6;
+          font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        tr:hover {
+          background-color: #f0f0f0;
+          cursor: pointer;
+        }
+      }
+    
+  }
+
+  .court-section {
+
+    .Game-stats {
+      margin-bottom: 20px;
+      border-collapse: collapse;
+
+      th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .court-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.shot-marker {
+  transition: r 0.2s ease-in-out;
+
+  &:hover {
+    r: 12;
+    fill: gray;
+  }
+}
+
+.make {
+  stroke: white;
+  stroke-width: 2;
+}
+
+.miss {
+  stroke: #315191;
+  stroke-width: 2;
+}
+
+.sports-card {
+  border: 1px solid gray;
+  border-radius: 12px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+  width: 300px;
+  height: 500px; 
+  background: #fff; 
+  display: flex;
+  flex-direction: column; 
+
+  .card-header {
+      position: relative; 
+      background-image: url('../../assets/ano.jpg');
+      background-size: cover; 
+      background-position: center; 
+      height: 150px; 
+      display: flex;
+      align-items: center; 
+      justify-content: center; 
+      color: white; 
+      padding: 16px; 
+
+      .player-image {
+          position: absolute;
+          bottom: -30px; 
+          border: 3px solid white; 
+          border-radius: 50%;
+          width: 80px; 
+          height: 80px; 
+          object-fit: cover; 
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+      }
+
+      h1 {
+          font-size: 1.5rem; 
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+          margin: 0; 
+          text-align: center;
+      }
+  }
+
+  .card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+      border-top: 2px solid #eee; 
+      background-color: #f9f9f9; 
+      .stat {
+        flex: 1 1 100px; 
+        text-align: center;
+          padding: 8px; 
+          border-right: 1px solid #ddd;
+
+          &:last-child {
+              border-right: none; 
+          }
+
+          strong {
+              display: block; 
+              font-size: 0.9rem; 
+              color: #333; 
+          }
+      }
+  }
+}
+
+.player-stats{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+button{
+  background-color: rgb(78, 109, 186);
+  border-radius: 2px;
+  color: #e2e2e2;
+  font-size: 16px;
 }

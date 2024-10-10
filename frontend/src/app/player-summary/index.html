@@ -1,0 +1,124 @@
+<div class="player-summary-container">
+    <!-- NBA-style Sports Card -->
+    <div class="sports-card">
+        <div class="card-header">
+            <img [src]="playerData?.image" alt="Player Image" class="player-image" />
+            <h1>{{ playerData?.name }}</h1>
+        </div>
+        <div class="card-stats">
+            <div class="stat"><strong>PTS</strong> {{ aggregateStats?.points }}</div>
+            <div class="stat"><strong>AST</strong> {{ aggregateStats?.assists }}</div>
+            <div class="stat"><strong>REB</strong> {{ aggregateStats?.rebounds }}</div>
+            <div class="stat"><strong>STL</strong> {{ aggregateStats?.steals }}</div>
+            <div class="stat"><strong>BLK</strong> {{ aggregateStats?.blocks }}</div>
+            <div class="stat"><strong>TO</strong> {{ aggregateStats?.turnovers }}</div>
+        </div>
+    </div>
+
+    <!-- Game Log Section -->
+    <div class="game-log-section">
+        <h2>Game Log</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>PTS</th>
+                    <th>AST</th>
+                    <th>REB</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TO</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let game of playerData?.games">
+                    <td>{{ game.date }}</td>
+                    <td>{{ game.points }}</td>
+                    <td>{{ game.assists }}</td>
+                    <td>{{ game.offensiveRebounds + game.defensiveRebounds }}</td>
+                    <td>{{ game.steals }}</td>
+                    <td>{{ game.blocks }}</td>
+                    <td>{{ game.turnovers }}</td>
+                    <td>
+                        <button (click)="viewGameDetails(game)">View Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Shot Summary Page (to be shown when a game is selected) -->
+    <div class="shot-summary" *ngIf="selectedGame">
+        <h2>Shot Summary for {{ selectedGame.date }}</h2>
+        <div class="game-stats">
+            <!-- Display detailed game stats here -->
+        </div>
+        <div class="court-container">
+            <!-- Include the SVG court and shot markers here -->
+        </div>
+    </div>
+</div>
+
+<div class="player-summary-container"></div>
+<!-- NBA-style Sports Card -->
+<div class="sports-card">
+    <div class="card-header">
+        <img [src]="playerData?.image" alt="Player Image" class="player-image" />
+        <h1>{{ playerData?.name }}</h1>
+    </div>
+    <div class="card-stats">
+        <div class="stat"><strong>PTS</strong> {{ aggregateStats?.points }}</div>
+        <div class="stat"><strong>AST</strong> {{ aggregateStats?.assists }}</div>
+        <div class="stat"><strong>REB</strong> {{ aggregateStats?.rebounds }}</div>
+        <div class="stat"><strong>STL</strong> {{ aggregateStats?.steals }}</div>
+        <div class="stat"><strong>BLK</strong> {{ aggregateStats?.blocks }}</div>
+        <div class="stat"><strong>TO</strong> {{ aggregateStats?.turnovers }}</div>
+        <div class="stat"><strong>OFF</strong> {{ aggregateStats?.offensiveRebounds }}</div>
+        <div class="stat"><strong>DEF</strong> {{ aggregateStats?.defensiveRebounds }}</div>
+        <div class="stat"><strong>OFF F</strong> {{ aggregateStats?.offensiveFouls }}</div>
+        <div class="stat"><strong>DEF F</strong> {{ aggregateStats?.defensiveFouls }}</div>
+    </div>
+</div>
+
+<!-- Rest of the component remains the same -->
+...
+</div>
+
+
+
+
+<div class="game-log-section">
+    <h2>Game Log</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>PTS</th>
+                <th>AST</th>
+                <th>REB</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TO</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of playerData?.games">
+                <td>{{ game.date }}</td>
+                <td>{{ game.points }}</td>
+                <td>{{ game.assists }}</td>
+                <td>{{ game.offensiveRebounds + game.defensiveRebounds }}</td>
+                <td>{{ game.steals }}</td>
+                <td>{{ game.blocks }}</td>
+                <td>{{ game.turnovers }}</td>
+                <td>
+                    <button (click)="viewGameDetails(game)">View Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Shots Display: Only Visible When a Game is Selected -->
