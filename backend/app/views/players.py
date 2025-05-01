@@ -15,8 +15,8 @@ class PlayerSummary(APIView):
     logger = LOGGER
 
     def get(self, request, playerID):
-        """Return player data"""
-        print(playerID)
+        """Return player summary stats and shot data."""
+        self.logger.debug("PlayerSummary.get playerID=%s", playerID)
         try:
             player = models.Player.objects.get(id=playerID)
         except models.Player.DoesNotExist:
