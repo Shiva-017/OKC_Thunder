@@ -33,7 +33,7 @@ class PlayerSummary(APIView):
         for player_game in player_games:
             game = player_game.game
             game_data = {
-                "date": game.date.strftime("%Y-%m-%d"),
+                "date": str(game.date),
                 "isStarter": player_game.is_starter,
                 "minutes": player_game.minutes,
                 "points": player_game.points,
