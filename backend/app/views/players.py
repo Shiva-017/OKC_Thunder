@@ -20,6 +20,7 @@ class PlayerSummary(APIView):
         try:
             player = models.Player.objects.get(id=playerID)
         except models.Player.DoesNotExist:
+            self.logger.warning("Player not found: %s", playerID)
             return Response({"error": "Player not found"}, status=404)
         
         player_summary = {
