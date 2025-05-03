@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import logging
-from functools import partial
 import json
 import os
 
