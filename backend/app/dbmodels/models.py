@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Contains models related to stats"""
+"""Django ORM models for players, teams, games and shot data."""
 from django.db import models
 
 class Team(models.Model):
