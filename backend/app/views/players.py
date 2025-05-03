@@ -65,7 +65,4 @@ class PlayerSummary(APIView):
 
             player_summary["games"].append(game_data)
         
-        # print(os.path.dirname(os.path.abspath(__file__)))
-        # with open(os.path.dirname(os.path.abspath(__file__)) + '/sample_response/sample_response.json') as sample_response:
-        #     data = json.load(sample_response)
         return Response(player_summary)
