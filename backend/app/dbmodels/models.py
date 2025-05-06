@@ -33,7 +33,7 @@ class GamePlayerStats(models.Model):
     id = models.BigAutoField(primary_key=True)
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
-    is_starter = models.BooleanField(default=False)
+    is_starter = models.BooleanField(default=False)  # True if player started the game
     minutes = models.IntegerField()
     points = models.IntegerField()
     assists = models.IntegerField()
