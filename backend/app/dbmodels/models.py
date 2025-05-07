@@ -53,7 +53,7 @@ class GamePlayerStats(models.Model):
 
 class PlayerShots(models.Model):
     game_player_stats = models.ForeignKey(GamePlayerStats, on_delete=models.CASCADE)
-    is_make = models.BooleanField()
-    location_x = models.FloatField()
-    location_y = models.FloatField()
+    is_make = models.BooleanField()         # True = made shot, False = miss
+    location_x = models.FloatField()        # horizontal court coordinate
+    location_y = models.FloatField()        # vertical court coordinate
 
