@@ -58,7 +58,7 @@ def load_data():
             }
         )
         if created:
-            print(f"Created Team: {team.name}")
+            print(f"[load_data] created game id={game_data['id']}")
         if not created:
             game.date = game_data['date']
             game.home_team = home_team
