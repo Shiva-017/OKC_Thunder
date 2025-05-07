@@ -129,7 +129,7 @@ def load_data():
                     )
                
 
-    print("Data loaded successfully!")
+    print("[load_data] completed successfully")
 
 if __name__ == "__main__":
     load_data()
