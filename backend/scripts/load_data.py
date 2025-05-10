@@ -42,7 +42,7 @@ def load_data():
             try:
                 player.save()
             except Exception as e:
-                print(f"Error saving player: {e}")
+                print(f"[load_data] error saving player id={player_data['id']}: {e}")
 
     # Load Games and Player Stats
     for game_data in games_data:
