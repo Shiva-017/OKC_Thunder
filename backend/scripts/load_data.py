@@ -32,7 +32,7 @@ def load_data():
             try:
                 team.save()
             except Exception as e:
-                print(f"Error saving team: {e}")
+                print(f"[load_data] error saving team id={team_data['id']}: {e}")
 
     # Load Players
     for player_data in players_data:
