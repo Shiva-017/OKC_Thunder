@@ -67,7 +67,7 @@ def load_data():
             try:
                 game.save()
             except Exception as e:
-                print(f"Error saving game: {e}")
+                print(f"[load_data] error saving game id={game_data['id']}: {e}")
         
         players_stats_data = game_data['homeTeam']['players'] + game_data['awayTeam']['players']
         for player_stat in players_stats_data:
