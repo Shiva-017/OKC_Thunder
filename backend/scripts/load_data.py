@@ -117,7 +117,7 @@ def load_data():
                 try:
                     game_player_stats.save()
                 except Exception as e:
-                    print(f"Error saving game player stats: {e}")
+                    print(f"[load_data] error saving stats player={player_stat['id']} game={game_data['id']}: {e}")
 
             if 'shots' in player_stat:
                 for shot_data in player_stat['shots']:
