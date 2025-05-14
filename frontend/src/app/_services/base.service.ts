@@ -10,6 +10,7 @@ export class BaseService {
     return new HttpHeaders();
   }
 
+  /** Maps API error field keys to human-readable labels */
   errorKeyMap: any = {};
 
   protected baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8000/api/v1' : (window.location.origin + '/api/v1');
