@@ -13,7 +13,7 @@ export class BaseService {
   errorKeyMap: any = {};
 
   protected baseUrl = window.location.origin.includes('localhost') ? 'http://localhost:8000/api/v1' : (window.location.origin + '/api/v1');
-  protected defaultLimit: number = 25;
+  protected defaultLimit: number = 50;
 
   constructor(protected http: HttpClient) {}
 
