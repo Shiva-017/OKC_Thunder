@@ -14,6 +14,7 @@ export class PlayersService extends BaseService {
     super(http);
   }
 
+  /** Fetch summary stats and shot data for a single player */
   getPlayerSummary(playerID: number): Observable<any> {
     const endpoint = `${this.baseUrl}/playerSummary/${playerID}`;
 
