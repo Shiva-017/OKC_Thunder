@@ -73,7 +73,7 @@ export class HttpErrorResponse {
 }
 
 export class CustomHttpParamEncoder implements HttpParameterCodec {
-  // Use this class when you want to encode any of: '@', ':', '$', ',', ';', '+', '=', '?', '/' in the query parameters of an HTTP request
+  // Use when query params contain special chars: '@', ':', '$', ',', ';', '+', '=', '?', '/'
   // Usage: let params: HttpParams = new HttpParams({ encoder: new CustomHttpParamEncoder() })
   // Example use case: Query parameter with a timestamp in UTC+ timezone. Django will interpret the '+' as a space if not encoded as '%2b%'
   // Default Angular behavior is to not encode these characters in order to comply with RFC 3986
