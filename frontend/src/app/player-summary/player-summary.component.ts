@@ -28,9 +28,9 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   hoveredShot: any = null; 
   src2 = '../../assets/ano.jpg'
 
-  scalingFactorX =  8.54; 
-  scalingFactorY = 8.42 ; 
-  basketPositionX = 268; 
+  scalingFactorX = 8.54;
+  scalingFactorY = 8.42;
+  basketPositionX = 268;
   basketPositionY = 93;
   cursorPosition = {x: 0, y: 0}
 
