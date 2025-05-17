@@ -25,7 +25,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   selectedGame: any = null;
   selectedShots: any[] = [];
   shotDetails: string = '';
-  hoveredShot: any = null; 
+  hoveredShot: any = null;
   src2 = '../../assets/ano.jpg'
 
   scalingFactorX = 8.54;
