@@ -19,15 +19,10 @@ export class PlayersService extends BaseService {
     const endpoint = `${this.baseUrl}/playerSummary/${playerID}`;
 
     return this.get(endpoint).pipe(map(
-      (data: Object) => {
-          return {
-            endpoint: endpoint,
-            apiResponse: data
-          };
-      },
-      error => {
-          return error;
-      }
+      (data: Object) => ({
+        endpoint,
+        apiResponse: data
+      })
     ));
   }
 }
