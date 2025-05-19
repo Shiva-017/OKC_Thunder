@@ -106,7 +106,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
         this.cursorPosition.x = svgCoords.x;
         this.cursorPosition.y = svgCoords.y;
     }
-    console.log(this.cursorPosition.x, this.cursorPosition.y)
+    // console.log(this.cursorPosition.x, this.cursorPosition.y)
 }
 
   selectGame(game: any) {
