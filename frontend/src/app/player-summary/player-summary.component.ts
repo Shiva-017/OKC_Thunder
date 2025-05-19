@@ -56,7 +56,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   loadPlayerSummary(playerId: number): void {
     this.playersService.getPlayerSummary(playerId).pipe(untilDestroyed(this)).subscribe(data => {
       this.playerData = data.apiResponse;
-      console.log(this.playerData);
+      this.logger && this.logger.debug ? this.logger.debug('playerData', this.playerData) : console.log('[player-summary] loaded:', this.playerData?.name);
       this.playerName = this.playerData.name;
       this.aggregateStats = this.calculateAggregateStats();
     });
