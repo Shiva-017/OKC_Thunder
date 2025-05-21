@@ -34,7 +34,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   basketPositionY = 93;
   cursorPosition = {x: 0, y: 0}
 
-  currentPage: number = 1;
+  currentPage = 1;
 
   showAllGames = true;
 
