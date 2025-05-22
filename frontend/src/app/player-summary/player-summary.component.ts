@@ -36,7 +36,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   currentPage = 1;
 
-  showAllGames = true;
+  showAllGames = true;  // controls whether game list or single game view is shown
 
   constructor(
     protected activatedRoute: ActivatedRoute,
