@@ -144,8 +144,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     const x = actualShotPosition.x
     const y = actualShotPosition.y
 
-    const threePointRadius: number = 200; 
-    const freeThrowLineDistance: number = 127;
+    const threePointRadius = 200;
+    const freeThrowLineDistance = 127;
 
     const distanceFromBasket: number = Math.sqrt(Math.pow((x-this.basketPositionX), 2) + Math.pow((y-this.basketPositionY), 2));
 
