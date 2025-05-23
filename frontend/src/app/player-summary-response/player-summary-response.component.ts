@@ -19,9 +19,9 @@ import {PlayersService} from '../_services/players.service';
 })
 export class PlayerSummaryResponseComponent implements OnInit, OnDestroy {
 
-  endpoint: any;
-  apiResponse: any;
-  playerID: number = 1;
+  endpoint: string = '';
+  apiResponse: string = '';
+  playerID = 1;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
