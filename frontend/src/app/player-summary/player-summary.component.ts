@@ -84,7 +84,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       aggregate.assists += game.assists;
       aggregate.minutes += game.minutes;
       aggregate.offensiveRebounds += game.offensiveRebounds;
-      aggregate.defensiveRebounds +=  game.defensiveRebounds;
+      aggregate.defensiveRebounds += game.defensiveRebounds;
       aggregate.steals += game.steals;
       aggregate.blocks += game.blocks;
       aggregate.turnovers += game.turnovers;
