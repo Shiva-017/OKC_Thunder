@@ -42,7 +42,7 @@ export class PlayerSummaryResponseComponent implements OnInit, OnDestroy {
   fetchApiResponse(): void {
     this.playersService.getPlayerSummary(this.playerID).pipe(untilDestroyed(this)).subscribe(data => {
       this.endpoint = data.endpoint;
-      this.apiResponse = JSON.stringify(data.apiResponse, null, 2);
+      this.apiResponse = JSON.stringify(data.apiResponse, null, 4);
     });
   }
 
